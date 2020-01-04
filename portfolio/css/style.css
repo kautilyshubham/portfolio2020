@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141821;
+    position: relative;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    overflow-x: hidden;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    height: 800px;
+}
+
+.main_static_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.main_bg_1,
+.main_bg_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+.main_bg_1,
+.portfolio_icon_bg_1,
+.about_sec_icon_bg_1,
+.footer_icon_bg_1{
+    animation: 4s ease-in-out 0s infinite alternate none running sliding-1-animation;
+}
+.main_bg_2,
+.portfolio_icon_bg_2,
+.about_sec_icon_bg_2,
+.footer_icon_bg_2{
+    animation: 18s ease-in-out 0s infinite alternate none running sliding-2-animation;
+}
+ /* sliding animation */
+ @keyframes sliding-1-animation{
+     0% {
+        transform: translateY(0px);
+    }
+    
+    100% {
+        transform: translateY(30px);
+    }
+ }
+ @keyframes sliding-2-animation{
+     0% {
+        transform: translateY(0px);
+    }
+    
+    100% {
+        transform: translateY(200px);
+    }
+ }
+
+
+.main_content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    width: 90%;
+    text-align: left;
+    z-index: 5;
+}
+
+.main_heading {
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: rgba(255, 255, 255, 0.15) 0px 5px 35px;
+    letter-spacing: 0.025em;
+    line-height: 1.75;
+}
+.main_para{
+    font-size: 1.875rem;
+    letter-spacing: -0.003em;
+    line-height: 1.625;
+    --baseline-multiplier: 0.179;
+    --x-height-multiplier: 0.35;
+    color: #e2e8f0;
+}
+
+/* pofofolio section */
+.portfolio_sec{
+    transform: translate3d(0px, 0px, 0px);
+    height: 1462px;
+    position: relative;
+}
+.portfolio_bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    clip-path: polygon(0px 15%, 100% 25%, 100% 85%, 0px 75%);
+    background: linear-gradient(to right, slateblue 0%, deepskyblue 100%);
+}
+.portfolio_icon_bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    
+}
+.portfolio_icon_bg_1, .portfolio_icon_bg_2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.portfolio_content_part{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 90%;
+    padding: 350px 0;
+}
+.heading{
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20;
+    letter-spacing: 0.1px;
+}
+/* about section */
+.about_sec{
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    height: 900px;
+}
+.about_sec_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d3748;
+    clip-path: polygon(0px 16%, 100% 4%, 100% 82%, 0px 94%);
+}
+.about_sec_icon_bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+}
+.about_sec_icon_bg_1,.about_sec_icon_bg_2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.about_content_part{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    width: 90%;
+    padding: 200px 0;
+
+}
+
+/* footer */
+.footer_sec{
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    height: 800px;
+    overflow-y: hidden;
+
+}
+.footer_icon_bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+}
+.footer_icon_bg_1,.footer_icon_bg_2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+.footer_wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
